@@ -1,0 +1,27 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #45a049;
+    color: #0000;
+  }
+  
+  nav a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+  }
+  
+  nav .active {
+    color: #0f0e07;
+    font-weight: bold;
+  }
+  
