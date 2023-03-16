@@ -14,7 +14,7 @@ export default function EditExcercise() {
 
     console.log(id)
 
-    fetch('http://localhost:5000/excercise/getexcercise/' + id, {
+    fetch('https://dizzy-fly-flannel-nightgown.cyclic.app/excercise/getexcercise/' + id, {
       method: "GET",
       headers: {
         "authorization": localStorage.getItem("Token")
@@ -28,7 +28,7 @@ export default function EditExcercise() {
   async function HandleSubmit(exerciseData) {
     try {
 
-      const result = await fetch("http://localhost:5000/excercise/editExcercise/" + id, {
+      const result = await fetch("https://dizzy-fly-flannel-nightgown.cyclic.app/excercise/editExcercise/" + id, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

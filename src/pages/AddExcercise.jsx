@@ -15,7 +15,7 @@ export default function AddExcercise() {
   async function HandleSubmit(exerciseData) {
     try {
 
-      const result = await fetch("http://localhost:5000/excercise/addexcercise", {
+      const result = await fetch("https://dizzy-fly-flannel-nightgown.cyclic.app/excercise/addexcercise", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

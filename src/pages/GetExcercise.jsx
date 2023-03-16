@@ -7,7 +7,7 @@ export default function ExerciseList() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('http://localhost:5000/excercise/getexcercise', {
+    fetch('https://dizzy-fly-flannel-nightgown.cyclic.app/excercise/getexcercise', {
       headers: {
         "authorization": localStorage.getItem("Token")
       }
@@ -19,7 +19,7 @@ export default function ExerciseList() {
   const handleDelete = (exerciseId) => {
 
 
-    fetch('http://localhost:5000/excercise/deleteExcercise/' + exerciseId, {
+    fetch('https://dizzy-fly-flannel-nightgown.cyclic.app/excercise/deleteExcercise/' + exerciseId, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

@@ -12,7 +12,7 @@ function Register() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const result = await fetch("http://localhost:5000/register", {
+      const result = await fetch("https://dizzy-fly-flannel-nightgown.cyclic.app/register", {
         
         method: "POST",
         headers: {
