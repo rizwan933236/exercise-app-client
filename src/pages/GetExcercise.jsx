@@ -13,7 +13,7 @@ export default function ExerciseList() {
       }
     })
       .then(res => res.json())
-      .then(data => { console.log(data.exercises); setExercises(data.exercises) })
+      .then(data => { setExercises(data.exercises) })
       .catch(err => console.log(err));
   }, []);
   const handleDelete = (exerciseId) => {
@@ -37,8 +37,11 @@ export default function ExerciseList() {
   };
 
   return (
-    <div className='cardWraper'>
-      {exercises.map((exercise, index) => (
+  <div className='cardWraper'>
+    {exercises.length === 0 ? (
+      <h1>No Exercises Available</h1>
+    ) : (
+      exercises.map((exercise, index) => (
         <div key={index} className="card">
           <div className="card-body">
             <h5 className="card-title">{exercise.title}</h5>
@@ -49,7 +52,8 @@ export default function ExerciseList() {
             <button onClick={() => navigate(`/EditExercise/${exercise._id.toString()}`)}>Edit</button>
           </div>
         </div>
-      ))}
-    </div>
-  );
+      ))
+    )}
+  </div>
+  )
 }
