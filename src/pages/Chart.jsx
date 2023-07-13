@@ -7,7 +7,7 @@ const PieRechartComponent = () => {
   const [exerciseData, setExerciseData] = useState([]);
 
   useEffect(() => {
-    fetch('https://dizzy-fly-flannel-nightgown.cyclic.app/pie/exercises')
+    fetch('https://dizzy-fly-flannel-nightgown.cyclic.app/excercise/pie/exercises')
       .then(response => response.json())
       .then(data => {
         const exerciseData = data.map(exercise => ({
